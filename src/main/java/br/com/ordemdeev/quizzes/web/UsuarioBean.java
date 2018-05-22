@@ -11,13 +11,19 @@ import br.com.ordemdeev.quizzes.usuario.UsuarioRN;
 @RequestScoped
 public class UsuarioBean {
 	
-	private Usuario usuario = new Usuario();;
+	private Usuario usuario = new Usuario();
 	public String confirmarSenha;
-	
+	private String destinoSalvar;
 	
 	public String novo() {
+		this.destinoSalvar = "usuariosucesso";
 		this.usuario = new Usuario();
 		this.usuario.setAtivo(true);
+		return "/publico/usuario";
+	}
+	
+	public String editar() {
+		this.confirmarSenha = this.usuario.getSenha();
 		return "/publico/usuario";
 	}
 
@@ -34,7 +40,7 @@ public class UsuarioBean {
 		UsuarioRN usuarioRN = new UsuarioRN();
 		usuarioRN.salvar(this.usuario);
 
-		return "usuariosucesso";
+		return this.destinoSalvar;
 	}
 	
 
@@ -52,6 +58,14 @@ public class UsuarioBean {
 
 	public void setConfirmarSenha(String confirmarSenha) {
 		this.confirmarSenha = confirmarSenha;
+	}
+
+	public String getDestinoSalvar() {
+		return destinoSalvar;
+	}
+
+	public void setDestinoSalvar(String destinoSalvar) {
+		this.destinoSalvar = destinoSalvar;
 	}
 	
 	

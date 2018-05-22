@@ -12,6 +12,7 @@
 		<h:messages />
 		<h:inputHidden value="#{usuarioBean.usuario.codigo}" />
 		<h:inputHidden value="#{usuarioBean.usuario.ativo}" />
+		<h:inputHidden value="#{usuarioBean.destinoSalvar}" />
 
 		<h:panelGrid columns="2">
 			<h:outputLabel value="Nome:" for="nome" />
@@ -24,8 +25,7 @@
 			<h:inputText id="login" label="Login"
 				value="#{usuarioBean.usuario.login}" size="15" maxlength="15"
 				required="true"
-				validatorMessage="Login deve ter no mínimo 5 e no máximo 15 caracteres e só pode ter os símbolos '.' e '_'.">
-				<f:validateRegex pattern="([a-z]|[0-9]|[.]|[_]){5,15}" />
+				validatorMessage="Login deve ter no máximo 15 caracteres">
 			</h:inputText>
 
 			<h:outputLabel value="Senha:" for="senha" />
