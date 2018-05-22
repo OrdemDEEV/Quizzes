@@ -1,13 +1,14 @@
 package br.com.ordemdeev.quizzes.usuario;
 
 import java.io.Serializable;
-import java.util.Date;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
+@Table(name = "USUARIO")
 public class Usuario implements Serializable {
 	
 	@Id
