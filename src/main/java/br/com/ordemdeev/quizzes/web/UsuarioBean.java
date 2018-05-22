@@ -11,7 +11,7 @@ import br.com.ordemdeev.quizzes.usuario.UsuarioRN;
 @RequestScoped
 public class UsuarioBean {
 	
-	private Usuario usuario;
+	private Usuario usuario = new Usuario();;
 	public String confirmarSenha;
 	
 	
