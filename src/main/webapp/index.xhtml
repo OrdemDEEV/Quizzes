@@ -4,11 +4,13 @@
 	xmlns:f="http://xmlns.jcp.org/jsf/core">
 <h:head>
 	<title>Quizzes</title>
+	 <meta name="viewport" content="width=device-width, initial-scale=1" />
+     <link rel="StyleSheet" type="text/css" href="#{request.contextPath}/web-resources/Bootstrap/css/bootstrap.min.css" media="screen" />
 </h:head>
 <h:body>
 	<h1>Quizzes</h1>
 	<h:form>
-		<h:commandLink action="#{usuarioBean.novo}">Novo usuário</h:commandLink>
+		<h:commandLink class="btn btn-danger" action="#{usuarioBean.novo}">Novo usuário</h:commandLink>
 	</h:form>
 </h:body>
 </html>
