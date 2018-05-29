@@ -6,7 +6,7 @@ import br.com.ordemdeev.quizzes.util.DAOFactory;
 
 public class PerguntaRN {
 	
-	PerguntaDAO perguntaDao;
+	private PerguntaDAO perguntaDao;
 	
 	public PerguntaRN() {
 		this.perguntaDao = DAOFactory.criarPerguntaDAO();

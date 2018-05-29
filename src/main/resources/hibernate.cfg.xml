@@ -21,6 +21,7 @@
 		<mapping class="br.com.ordemdeev.quizzes.usuario.Usuario" />
 		<mapping class="br.com.ordemdeev.quizzes.grupo.Grupo" />
 		<mapping class="br.com.ordemdeev.quizzes.pergunta.Pergunta" />
+		<mapping class="br.com.ordemdeev.quizzes.alternativa.Alternativa" />
 
 	</session-factory>
 </hibernate-configuration>
