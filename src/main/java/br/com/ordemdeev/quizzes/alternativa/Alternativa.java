@@ -1,17 +1,20 @@
 package br.com.ordemdeev.quizzes.alternativa;
 
 import java.io.Serializable;
+import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
 
 import br.com.ordemdeev.quizzes.pergunta.Pergunta;
+import br.com.ordemdeev.quizzes.usuario.Usuario;
 
 @Entity
 @Table(name = "ALTERNATIVA")
@@ -30,6 +33,9 @@ public class Alternativa implements Serializable{
 	@OnDelete(action=OnDeleteAction.CASCADE)
 	@JoinColumn(nullable = false)
 	private Pergunta pergunta;
+	
+	@ManyToMany(mappedBy = "resposta")
+	private List<Usuario> usuario;
 
 	public int getCodigo() {
 		return codigo;
