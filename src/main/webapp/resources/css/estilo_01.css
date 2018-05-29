@@ -5,6 +5,9 @@ body{
 .form-control{
 	border-radius:0px;
 }
+.padding_principal{
+	padding:30px;
+}
 .margem_login{
 	margin-top:10%;
 }
