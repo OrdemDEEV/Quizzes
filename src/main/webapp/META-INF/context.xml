@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Context reloadable="true">
 	<Resource name="jdbc/QuizzesDB" auth="Container" type="javax.sql.DataSource"
-		maxActive="100" maxIdle="30" maxWait="10000" username="root" password="123"
+		maxActive="100" maxIdle="30" maxWait="10000" username="root" password="ed1010@@@@"
 		driverClassName="com.mysql.jdbc.Driver"
 		url="jdbc:mysql://localhost:3306/quizzes?autoReconnect=true" />
 </Context>
