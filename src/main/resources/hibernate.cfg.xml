@@ -20,6 +20,7 @@
 		<!-- Mapeando classes --> 
 		<mapping class="br.com.ordemdeev.quizzes.usuario.Usuario" />
 		<mapping class="br.com.ordemdeev.quizzes.grupo.Grupo" />
+		<mapping class="br.com.ordemdeev.quizzes.pergunta.Pergunta" />
 
 	</session-factory>
 </hibernate-configuration>
