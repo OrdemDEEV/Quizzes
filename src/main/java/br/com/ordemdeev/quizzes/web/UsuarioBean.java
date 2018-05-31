@@ -4,6 +4,8 @@ import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
 import javax.faces.context.FacesContext;
+
+
 import br.com.ordemdeev.quizzes.usuario.Usuario;
 import br.com.ordemdeev.quizzes.usuario.UsuarioRN;
 
@@ -14,6 +16,7 @@ public class UsuarioBean {
 	private Usuario usuario = new Usuario();
 	public String confirmarSenha;
 	private String destinoSalvar;
+	private String mostrarNomeAleatorio;
 	
 	public String novo() {
 		this.destinoSalvar = "usuariosucesso";
@@ -43,6 +46,21 @@ public class UsuarioBean {
 		return this.destinoSalvar;
 	}
 	
+	
+
+
+	public String getMostrarNomeAleatorio() {
+		
+		UsuarioRN usuarioRN = new UsuarioRN();
+		
+		mostrarNomeAleatorio = usuarioRN.buscarPorLogin("teste11").getNome();
+		
+		return mostrarNomeAleatorio;
+	}
+
+	public void setMostrarNomeAleatorio(String mostrarNomeAleatorio) {
+		this.mostrarNomeAleatorio = mostrarNomeAleatorio;
+	}
 
 	public Usuario getUsuario() {
 		return usuario;

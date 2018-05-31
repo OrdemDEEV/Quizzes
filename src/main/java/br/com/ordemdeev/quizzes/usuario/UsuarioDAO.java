@@ -1,17 +1,9 @@
 package br.com.ordemdeev.quizzes.usuario;
 
-import java.util.List;
+import br.com.ordemdeev.quizzes.util.RepositoryDAO;
 
-public interface UsuarioDAO {
-	public void salvar(Usuario usuario);
-
-	public void atualizar(Usuario usuario);
-
-	public void excluir(Usuario usuario);
-
-	public Usuario carregar(Integer codigo);
+public interface UsuarioDAO extends RepositoryDAO<Usuario>{
 
 	public Usuario buscarPorLogin(String login);
 
-	public List<Usuario> listar();
 }

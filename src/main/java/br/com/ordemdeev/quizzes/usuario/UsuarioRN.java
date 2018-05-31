@@ -11,7 +11,7 @@ public class UsuarioRN {
 	}
 
 	public Usuario carregar(Integer codigo) {
-		return this.usuarioDAO.carregar(codigo);
+		return this.usuarioDAO.carregar(new Usuario(), codigo);
 	}
 
 	public Usuario buscarPorLogin(String login) {
@@ -25,7 +25,7 @@ public class UsuarioRN {
 			usuario.getPermissao().add("ROLE_USUARIO");
 			this.usuarioDAO.salvar(usuario);
 		} else {
-			this.usuarioDAO.atualizar(usuario);
+			this.usuarioDAO.salvar(usuario);
 		}
 	}
 
@@ -34,7 +34,7 @@ public class UsuarioRN {
 	}
 
 	public List<Usuario> listar() {
-		return this.usuarioDAO.listar();
+		return this.usuarioDAO.listar(new Usuario());
 	}
 
 }

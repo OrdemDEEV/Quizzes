@@ -7,12 +7,12 @@ import br.com.ordemdeev.quizzes.grupo.GrupoDaoHibernate;
 import br.com.ordemdeev.quizzes.pergunta.PerguntaDAO;
 import br.com.ordemdeev.quizzes.pergunta.PerguntaDaoHibernate;
 import br.com.ordemdeev.quizzes.usuario.UsuarioDAO;
-import br.com.ordemdeev.quizzes.usuario.UsuarioDAOHibernate;
+import br.com.ordemdeev.quizzes.usuario.UsuarioHibernateRepository;
 
 public class DAOFactory {
 
 	public static UsuarioDAO criarUsuarioDAO() {
-		UsuarioDAOHibernate usuarioDAO = new UsuarioDAOHibernate();
+		UsuarioHibernateRepository usuarioDAO = new UsuarioHibernateRepository();
 		usuarioDAO.setSession(HibernateUtil.getSessionFactory().getCurrentSession());
 		return usuarioDAO;
 	}
