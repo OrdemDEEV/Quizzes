@@ -8,12 +8,7 @@
 	<link rel="stylesheet" href="#{request.contextPath}/resources/css/estilo_01.css"/>
 </h:head>
 <h:body>
-	<h:panelGroup rendered="#{!empty param.login_error}">
-		<span style="color: red"> Erro ao efetuar o login.</span>
-		<br />
-		<br />
-		Motivo: #{SPRING_SECURITY_LAST_EXCEPTION.message}
-	</h:panelGroup>
+	
 
 	<form id="login" method="post"
 		action="#{request.contextPath}/j_spring_security_check">
@@ -28,8 +23,12 @@
 					<input class="form-control" type='text' name='j_username' />
 					<label>Senha</label>
 					<input class="form-control" type='password' name='j_password' />
-					<label>Manter Conectado</label>
 					<input type="checkbox" name="_spring_security_remember_me" />
+					<label>Manter Conectado</label>
+						<h:panelGroup rendered="#{!empty param.login_error}">	
+							<br /><span style="color: red"> Erro ao efetuar o login.</span><br />
+							Motivo: #{SPRING_SECURITY_LAST_EXCEPTION.message}
+						</h:panelGroup>
 					<input class="btn btn-success btn-block" type="submit" value="Entrar" />
 				</div>
 			</div>
