@@ -1,12 +1,8 @@
 package br.com.ordemdeev.quizzes.pergunta;
 
-import java.util.List;
+import br.com.ordemdeev.quizzes.util.RepositoryDAO;
 
-public interface PerguntaDAO {
+public interface PerguntaDAO extends RepositoryDAO<Pergunta>{
 	
-	public void salvar(Pergunta pergunta);
-	public void excluir(Pergunta pergunta);
-	public Pergunta carregar(Integer codigo);
-	public List<Pergunta> listar();
 	
 }

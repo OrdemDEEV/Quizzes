@@ -14,12 +14,12 @@ public class GrupoRN {
 	
 	public List<Grupo> listar()
 	{
-		return this.grupoDao.listar();
+		return this.grupoDao.listar(new Grupo());
 	}
 	
 	public Grupo carregar(Integer codigo)
 	{
-		return this.grupoDao.carregar(codigo);
+		return this.grupoDao.carregar(new Grupo(),codigo);
 	}
 	
 	public void salvar(Grupo grupo)

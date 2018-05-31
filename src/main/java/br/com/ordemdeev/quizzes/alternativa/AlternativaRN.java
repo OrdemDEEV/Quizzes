@@ -21,7 +21,7 @@ public class AlternativaRN {
 	
 	public Alternativa carregar(Integer codigo)
 	{
-		return this.alternativaDAO.carregar(codigo);
+		return this.alternativaDAO.carregar(new Alternativa(), codigo);
 	}
 	
 	public void salvar(Alternativa alternativa)

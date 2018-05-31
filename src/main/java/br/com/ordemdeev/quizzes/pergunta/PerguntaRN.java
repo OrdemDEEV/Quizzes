@@ -14,12 +14,12 @@ public class PerguntaRN {
 	
 	public List<Pergunta> listar()
 	{
-		return this.perguntaDao.listar();
+		return this.perguntaDao.listar(new Pergunta());
 	}
 	
 	public Pergunta carregar(Integer codigo)
 	{
-		return this.perguntaDao.carregar(codigo);
+		return this.perguntaDao.carregar(new Pergunta(),codigo);
 	}
 	
 	public void salvar(Pergunta pergunta)

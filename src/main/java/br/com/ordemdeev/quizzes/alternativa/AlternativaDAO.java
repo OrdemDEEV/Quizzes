@@ -3,12 +3,9 @@ package br.com.ordemdeev.quizzes.alternativa;
 import java.util.List;
 
 import br.com.ordemdeev.quizzes.pergunta.Pergunta;
+import br.com.ordemdeev.quizzes.util.RepositoryDAO;
 
-public interface AlternativaDAO {
+public interface AlternativaDAO extends RepositoryDAO<Alternativa> {
 	
-	public void salvar(Alternativa alternativa);
-	public void excluir(Alternativa alternativa);
-	public Alternativa carregar(Integer codigo);
 	public List<Alternativa> listar(Pergunta pergunta);
-
 }
