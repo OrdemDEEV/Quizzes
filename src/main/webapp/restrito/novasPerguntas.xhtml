@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+    <title>Quizzes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="#{request.contextPath}/resources/bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="#{request.contextPath}/resources/css/estilo_01.css"/>
+</h:head>
+<h:body>
+    <h:form>
+
+        <div class="container padding_geral">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h3>Cadastrar Nova Pergunta</h3><h:commandButton styleClass="btn btn-outline-success btn-sm" value="Voltar" action="home"></h:commandButton>
+                </div>
+            </div>
+            <div class="row margem_title_superior">
+                <div class="col-sm-12">
+                    <label>Informe a descrição de sua pergunta</label>
+                    <h:inputTextarea styleClass="form-control" rows="5" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-8">
+                    <label>Descreva as opções para sua pergunta</label>
+                    <h4>a)</h4><h:inputText styleClass="form-control" id="opcaoa" ></h:inputText>
+                </div>
+                <div class="col-sm-4">
+                    <label>Informe o peso</label>
+                    <h4>a)</h4><h:inputText styleClass="form-control" id="pesoa" ></h:inputText>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-8">
+                    <h4>b)</h4><h:inputText styleClass="form-control" id="opcaob" ></h:inputText>
+                </div>
+                <div class="col-sm-4">
+                    <h4>b)</h4><h:inputText styleClass="form-control" id="pesob" ></h:inputText>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-8">
+                    <h4>c)</h4><h:inputText styleClass="form-control" id="opcaoc" ></h:inputText>
+                </div>
+                <div class="col-sm-4">
+                    <h4>c)</h4><h:inputText styleClass="form-control" id="pesoc" ></h:inputText>
+                </div>
+            </div>
+            <div class="row margem_botao">
+                <div class="col-sm-12">
+                    <h:commandButton styleClass="btn btn-success" value="Salvar"></h:commandButton>
+                </div>
+            </div>
+        </div>
+
+    </h:form>
+</h:body>
+</html>

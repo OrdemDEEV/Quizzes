@@ -6,18 +6,17 @@
 	<title>Login</title>
 	<link rel="stylesheet" href="#{request.contextPath}/resources/bootstrap/css/bootstrap.min.css"/>
 	<link rel="stylesheet" href="#{request.contextPath}/resources/css/estilo_01.css"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
 </h:head>
 <h:body>
-	
 
+	<div class="container">
 	<form id="login" method="post"
 		action="#{request.contextPath}/j_spring_security_check">
 		
-		<div class="container margem_login">
+
 			<div class="row">
-				<div class="col-sm-4">
-				</div>
-				<div class="col-sm-3">
+				<div class="col-sm-12 col-xs-12">
 					<h2>QUIZZES</h2>
 					<label>Usuário</label>
 					<input class="form-control" type='text' name='j_username' />
@@ -32,18 +31,16 @@
 					<input class="btn btn-success btn-block" type="submit" value="Entrar" />
 				</div>
 			</div>
-		</div>
+
 		
 		<script>
 		document.getElementById("login").j_username.value = "#{SPRING_SECURITY_LAST_USERNAME}"; 
 	</script>
 	</form>
 	
-	<div class="container">
+
 		<div class="row">
-			<div class="col-sm-4">
-			</div>
-			<div class="col-sm-3">
+			<div class="col-sm-12 col-xs-12">
 				<h:form>
 					<h:commandLink class="btn btn-xs btn-danger btn-block" action="#{usuarioBean.novo}">Novo usuário</h:commandLink>
 				</h:form>

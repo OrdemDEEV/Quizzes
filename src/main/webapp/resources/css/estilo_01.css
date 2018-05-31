@@ -1,13 +1,9 @@
-body{
-	background: #00c5bb;
-	color:#ffffff;
+.padding_geral{
+    padding: 20px;
 }
-.form-control{
-	border-radius:0px;
+.margem_botao{
+    margin-top: 5px;
 }
-.padding_principal{
-	padding:30px;
-}
-.margem_login{
-	margin-top:10%;
+.margem_title_superior{
+    margin-top: 20px;
 }

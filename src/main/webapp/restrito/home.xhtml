@@ -9,19 +9,28 @@
 	 <link rel="stylesheet" href="#{request.contextPath}/resources/css/estilo_01.css"/>
 </h:head>
 <h:body>
-	<h2>Escolha uma opção</h2>
 	<h:form>
-	
-	<div class="container text-center">
-		<div class="row">
-			<div class="col-sm-12 padding_principal text-center">
-				<h:commandButton styleClass="btn btn-success" value="teste"></h:commandButton>
+
+		<div class="container padding_geral">
+			<div class="row">
+				<div class="col-sm-12">
+					<h3>Selecione uma opção</h3>
+				</div>
+			</div>
+			<div class="row margem_title_superior">
+				<div class="col-sm-12">
+					<a onclick="document.location='#{request.contextPath}/j_spring_security_logout'" class="btn btn-outline-success btn-sm">sair</a>
+				</div>
+			</div>
+			<div class="row margem_botao">
+				<div class="col-sm-12">
+					<h:commandButton styleClass="btn btn-default btn-block" value="Cadastrar Perguntas" action="/restrito/novasPerguntas"></h:commandButton>
+					<h:commandButton styleClass="btn btn-default btn-block" value="Responder Perguntas" action="/restrito/ResponderPerguntas"></h:commandButton>
+				</div>
 			</div>
 		</div>
-	</div>
-	
-	<a onclick="document.location='#{request.contextPath}/j_spring_security_logout'">
-	<font color="blue">sair</font></a> 
+
+
 		
 	</h:form>
 	</h:body>
